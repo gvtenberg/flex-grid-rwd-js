@@ -1,0 +1,307 @@
+html {
+    scroll-padding-top: 55px;
+    /* Para resolver o problema do header sempre visível ao clicar em uma âncora */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #303030;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 55px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0d47a1;
+    color: whitesmoke;
+    padding: 1rem;
+
+    position: fixed; /* Header sempre visível na tela */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.4s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav a,
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.nav a:hover,
+.nav a:focus,
+header a:hover,
+header a:focus {
+    text-decoration: underline;
+}
+
+.nav a:active,
+header a:active {
+    color: #bbdefb;
+}
+
+#menu {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    color: white;
+    border: none;
+}
+
+.inicio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    background: white;
+}
+
+.recurso .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:focus,
+.card:focus-visible {
+    outline: 3px solid #1e88e5;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.galeria .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.galeria figure {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.galeria figure img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.galeria figure:hover img,
+.inicio img:hover {
+    transform: scale(1.05);
+}
+
+.inicio img {
+    border-radius: 8px;
+}
+
+.inicio img:hover {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.galeria figure:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.galeria figcaption {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: #1565c0;
+    /* tom coerente com a paleta */
+    font-weight: 600;
+}
+
+.galeria figure figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.galeria figure:hover figcaption {
+    opacity: 1;
+}
+
+.galeria img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+input,
+textarea,
+button {
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #1565c0;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#btnWhats {
+    background: #25d366;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+#btnWhats:hover {
+    background: #1ebc57;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 2rem 2rem 0.1rem;
+    background: white;
+}
+
+form .botoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+form .botoes button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.contato form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a:focus,
+button:focus {
+    outline: 3px solid #90caf9;
+    outline-offset: 2px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid #1e88e5;
+    border-color: #1565c0;
+}
+
+#obs {
+    color: #1ebc57;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 0;
+}
+
+#feedback {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    transition: opacity 0.5s ease;
+}
+
+#feedback.erro {
+    color: #c62828;
+}
+
+#feedback.sucesso {
+    color: #2e7d32;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1e88e5;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .conteudo { grid-template-columns: 1fr; }
+    .conteudo article { order: 2; }
+    .conteudo aside   { order: 1; }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: #1e88e5;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .nav.ativo {
+        display: flex;
+    }
+
+    form .botoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+}
